@@ -1,0 +1,32 @@
+\begin{table}[htbp]
+\centering
+\caption{Local barrier vs. free entry: pooled border $\times$ regime interaction (Washington dropped)}
+\label{tab:localbarrier_vs_free_pooled}
+\footnotesize
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lccccccc}
+\toprule
+& \multicolumn{2}{c}{Border} & \multicolumn{2}{c}{Local barrier} & \multicolumn{2}{c}{Border $\times$ Local barrier} & \\
+Outcome & Coef. (\%) & $p$ (cl.) & Coef. (\%) & $p$ (cl.) & Coef. (\%) & $p$ (cl.) & $n$ \\
+\midrule
+Revenue per store & $+0.392$ ($+47.9\%$) & 0.113 & $+1.087$ ($+196.6\%$) & 0.000 & $+0.137$ ($+14.6\%$) & 0.633 & 570 \\
+Revenue per capita & $+1.036$ ($+181.7\%$) & 0.000 & $+0.866$ ($+137.8\%$) & 0.000 & $-0.828$ ($-56.3\%$) & 0.009 & 799 \\
+Dispensary density & $+0.697$ ($+100.7\%$) & 0.000 & $+0.121$ ($+12.9\%$) & 0.404 & $-0.972$ ($-62.2\%$) & 0.000 & 570 \\
+\bottomrule
+\end{tabular}
+}
+\begin{minipage}{0.98\textwidth}
+\vspace{0.3em}
+\footnotesize
+\textit{Notes:} Washington dropped entirely; free group restricted to New Mexico (all years) and Oregon's
+2015--2021 free period only (Table~\ref{tab:localbarrier_vs_free_summary}). No state fixed effects: within this
+filtered sample, the local-barrier indicator has no within-state variation for any contributing state, so it is
+collinear with state dummies by construction. Dispensary density is reported here only as the cross-sectional
+pooled coefficient; it is NOT run as a year-by-year event study (Figures~\ref{fig:localbarrier_vs_free_percapita}
+and \ref{fig:localbarrier_vs_free_perstore} below cover revenue outcomes only), because Colorado's
+\texttt{dispensary\_count} is confirmed frozen -- identical for a given county across every year it appears in
+the panel, a data-construction artifact of the same geocoded dispensary registry responsible for the
+\texttt{baseline\_assumed} placeholder open-date issue documented elsewhere -- and Montana contributes only a
+single 2025 cross-section, so neither state offers genuine within-group time variation for density.
+\end{minipage}
+\end{table}

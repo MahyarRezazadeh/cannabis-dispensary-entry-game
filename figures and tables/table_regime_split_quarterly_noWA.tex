@@ -1,0 +1,26 @@
+\begin{table}[htbp]
+\centering
+\caption{Border effect by entry regime, quarterly panel, Washington dropped}
+\label{tab:regime_split_quarterly_noWA}
+\footnotesize
+\begin{tabular}{llcccl}
+\toprule
+Regime & Outcome & Border Coef. (\%) & $p$ (cl.) & $n$ & States contributing \\
+\midrule
+Capped & Revenue per capita & $+0.326$ ($+38.5%$) & 0.069 & 2474 & CO,MT,OR \\
+Capped & Revenue per store & $+0.351$ ($+42.1%$) & 0.081 & 159 & CO \\
+Capped & Dispensary density & $-0.182$ ($-16.7%$) & 0.304 & 159 & CO \\
+Free & Revenue per capita & $+0.822$ ($+127.6%$) & 0.000 & 1024 & NM,OR \\
+Free & Revenue per store & $+0.177$ ($+19.3%$) & 0.132 & 484 & NM \\
+Free & Dispensary density & $+0.565$ ($+75.9%$) & 0.001 & 484 & NM \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.98\textwidth}
+\vspace{0.3em}
+\footnotesize
+\textit{Notes:} Sample split by the state-year entry-cap indicator, not estimated jointly with an interaction
+term. CO and MT are capped for their entire panel window and so contribute nothing to the Free row; New
+Mexico is free-entry for its entire panel window and so contributes nothing to the Capped row; Oregon
+contributes to both (free 2015--2021, capped 2022 onward). County-clustered standard errors.
+\end{minipage}
+\end{table}

@@ -1,0 +1,43 @@
+\begin{table}[htbp]
+\centering
+\caption{Entry Timing: Cox Proportional-Hazards Models (corrected)}
+\label{tab:entry_hazard}
+\footnotesize
+\begin{tabular}{lcccc}
+\toprule
+Entrant rank & Border measure & Hazard ratio & Coef. & $p$ \\
+\midrule
+1st (state launch $\to$ 1st, $n=479$, 271 events) & border $\le$70mi & $1.251$ & $+0.224$ & $0.146$ \\
+ & log(dist.\ to non-legal border) & $0.927$ & $-0.076$ & $0.540$ \\
+\midrule
+2nd (1st $\to$ 2nd, $n=271$, 211 events) & border $\le$70mi & $1.358$ & $+0.306$ & $0.105$ \\
+ & log(dist.\ to non-legal border) & $0.612$ & $-0.491$ & $0.001$ \\
+\midrule
+3rd (2nd $\to$ 3rd, $n=211$, 174 events) & border $\le$70mi & $1.292$ & $+0.257$ & $0.227$ \\
+ & log(dist.\ to non-legal border) & $0.743$ & $-0.297$ & $0.090$ \\
+\midrule
+4th (3rd $\to$ 4th, $n=174$, 142 events) & border $\le$70mi & $1.515$ & $+0.416$ & $0.091$ \\
+ & log(dist.\ to non-legal border) & $0.837$ & $-0.178$ & $0.356$ \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.95\textwidth}
+\vspace{0.3em}
+\footnotesize
+\textit{Notes:} All models stratified by state (state fixed effects) and control for log(population); the
+9-state, 479-county entry-density universe. \textbf{Corrected from the original version of this table}: every
+Colorado and Washington record in the underlying geocoded dispensary file shares an identical placeholder
+open date (2015-01-01, tagged \texttt{date\_confidence=baseline\_assumed}), not an observed opening date. The
+original table included these records, producing degenerate zero-duration gaps for 58\% of CO/WA
+counties (vs.\ 18\% pooling all nine states) and reducing effective sample size and precision. This corrected
+version excludes all \texttt{baseline\_assumed} records (759 of 5{,}825 total), leaving seven states with
+genuinely observed entry dates (CA, IL, MA, ME, NY, OH, OR). The 2nd-entrant result is not an artifact of the
+excluded records: it survives, and its precision improves, on the clean sample (hazard ratio on log-distance
+moves from 0.696, $p=0.003$ on the contaminated 346-county sample to 0.612, $p=0.001$ on this 271-county
+corrected sample). The additional 3rd- and 4th-rank rows, not estimable from the original single-gap panel,
+show the effect is largest and most precise specifically at rank 2, weakening at rank 3 and no longer
+significant at rank 4 -- evidence the effect is a genuine second-entrant phenomenon, not a generic
+"closer-to-any-nonlegal-state entrants always arrive faster" pattern. Time to 1st dispensary is measured in
+days from a county's own state's retail-launch date; counties with no dispensary as of the 2026-08-05 data
+cutoff are right-censored at that date rather than dropped.
+\end{minipage}
+\end{table}

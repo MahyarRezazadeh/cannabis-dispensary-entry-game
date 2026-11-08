@@ -1,0 +1,26 @@
+\begin{table}[htbp]
+\centering
+\caption{Main pooled specification, quarterly panel, Washington dropped}
+\label{tab:main_pooled_quarterly_noWA}
+\footnotesize
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lccccccc}
+\toprule
+& \multicolumn{2}{c}{Border} & \multicolumn{2}{c}{Capped} & \multicolumn{2}{c}{Border $\times$ Capped} & \\
+Outcome & Coef. (\%) & $p$ (cl.) & Coef. (\%) & $p$ (cl.) & Coef. (\%) & $p$ (cl.) & $n$ \\
+\midrule
+Revenue per capita & $+0.813$ ($+125.5%$) & 0.000 & $+0.278$ ($+32.0%$) & 0.010 & $-0.480$ ($-38.1%$) & 0.052 & 3498 \\
+Revenue per store & $+0.174$ ($+19.0%$) & 0.135 & $+0.810$ ($+124.8%$) & 0.000 & $+0.180$ ($+19.7%$) & 0.421 & 643 \\
+Dispensary density & $+0.604$ ($+82.9%$) & 0.000 & $-0.128$ ($-12.0%$) & 0.417 & $-0.821$ ($-56.0%$) & 0.004 & 643 \\
+\bottomrule
+\end{tabular}
+}
+\begin{minipage}{0.98\textwidth}
+\vspace{0.3em}
+\footnotesize
+\textit{Notes:} Sample: CO, OR, MT, NM (Washington dropped). Border is county-to-state-line geometric
+adjacency, entry-cap classification as in the main design. Period fixed effects are calendar year-quarter dummies. Revenue per store and dispensary density are estimated for Colorado and New Mexico only, the
+only two states with a genuinely time-varying (not single-snapshot) dispensary count at this frequency.
+County-clustered standard errors.
+\end{minipage}
+\end{table}

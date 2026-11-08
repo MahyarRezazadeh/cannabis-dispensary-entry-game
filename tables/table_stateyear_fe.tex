@@ -1,0 +1,29 @@
+\begin{table}[htbp]
+\centering
+\caption{Robustness: main pooled specification with state $\times$ year fixed effects}
+\label{tab:stateyear_fe}
+\footnotesize
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lcccc}
+\toprule
+& \multicolumn{2}{c}{Border} & \multicolumn{2}{c}{Border $\times$ Capped} \\
+Outcome & Coef. (\%) & $p$ (cl.) & Coef. (\%) & $p$ (cl.) \\
+\midrule
+Revenue per store & $+0.384$ ($+46.8\%$) & 0.187 & $+0.030$ ($+3.0\%$) & 0.926 \\
+Revenue per capita & $+1.017$ ($+176.4\%$) & 0.001 & $-0.656$ ($-48.1\%$) & 0.041 \\
+Dispensary density & $+0.664$ ($+94.2\%$) & 0.000 & $-0.758$ ($-53.1\%$) & 0.000 \\
+\bottomrule
+\end{tabular}
+}
+\begin{minipage}{0.98\textwidth}
+\vspace{0.3em}
+\footnotesize
+\textit{Notes:} Same sample and outcome construction as the main pooled table, with the additive state and
+year fixed effects replaced by a full state$\times$year fixed effect (a separate dummy for every state-year
+cell), absorbing any state-specific time trend entirely. The \texttt{Capped} main effect cannot be separately
+estimated once state$\times$year fixed effects are included -- it is a state-year-level variable and is
+therefore exactly collinear with the fixed effects (confirmed by a matrix-rank check, not assumed) -- so only
+the border main effect and the border $\times$ capped interaction are reported; both remain identified because
+border status varies at the county level within a state-year cell. County-clustered standard errors.
+\end{minipage}
+\end{table}

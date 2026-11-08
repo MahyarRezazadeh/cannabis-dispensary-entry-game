@@ -1,0 +1,24 @@
+\begin{table}[htbp]
+\centering
+\caption{State-specific border coefficients, by outcome}
+\label{tab:state_specific}
+\begin{tabular}{lccc}
+\toprule
+State (entry regime) & Revenue/store & Revenue/capita & Dispensary density \\
+\midrule
+CO (capped) & $+0.592$*** & $+0.282$*** & $-0.309$*** \\
+WA (capped) & $+0.273$*** & $+0.330$*** & $+0.056$ \\
+OR (mixed) & $+1.168$*** & $+0.857$*** & $-0.522$ \\
+MT (capped) & $+0.012$ & $+0.653$*** & $+0.236$* \\
+NM (free) & $+0.410$** & $+1.148$*** & $+0.738$*** \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.85\textwidth}
+\vspace{0.3em}
+\footnotesize
+\textit{Notes:} Each cell is the border-county coefficient from a separate within-state OLS regression
+(log outcome on border indicator, log population, and year fixed effects where more than one year is
+available), HC1 standard errors. $^{*}p<0.1$, $^{**}p<0.05$, $^{***}p<0.01$. ``--'' indicates no
+border/interior variation within that state for that outcome.
+\end{minipage}
+\end{table}
